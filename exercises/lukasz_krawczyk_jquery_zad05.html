@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 
 	<title>Zadanie 5. Efekty specjalne (animacje)</title>
@@ -8,10 +9,10 @@
 	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
+
 	<script>
 		/* Dana jest strona z menu 2-poziomowym (podmenu pojawia się pod pozycją drugą).
-		
+
 		Przetestuj działanie metod animacji:
 		a) z predefiniowanym parametrem 'fast'
 		b) z predefiniowanym parametrem 'medium'
@@ -20,24 +21,44 @@
 
 		// Nie usuwaj z dokumentu żadnego istniejącego kodu HTML.
 
-		$(function() {
-			// a)
-			// Tutaj wpisz swój kod inicjalizacyjny
-			
+		$(function () {
+			// $('li > ul').hide('fast');
+			// $('li:has("ul")').click(
+			// 	function() {
+			// 		$(this).children().toggle('fast');
+			// 	}
+			// )
+
 			// b)
-			// Tutaj wpisz swój kod inicjalizacyjny
-			
+			$('li > ul').slideUp('medium')
+			$('li:has("ul")').click(
+				function () {
+					$(this).children().slideToggle('medium');
+				}
+			)
+
 			// c)
-			// Tutaj wpisz swój kod inicjalizacyjny
-			
+			// $('li > ul').fadeOut('slow');
+			// $('li:has("ul")').click(
+			// 	function() {
+			// 		$(this).children().fadeToggle('slow');
+			// 	}
+			// )
+
 			// d)
-			// Tutaj wpisz swój kod inicjalizacyjny
+			// $('li > ul').hide();
+			// $('li:has("ul")').click(
+			// 	function () {
+			// 		$(this).children().toggle();
+			// 	}
+			// )
 		});
 	</script>
 
 </head>
+
 <body>
-	
+
 	<ul>
 		<li>Pozycja 1</li>
 		<li>Pozycja 2
@@ -50,6 +71,7 @@
 		<li>Pozycja 3</li>
 		<li>Pozycja 4</li>
 	</ul>
-	
+
 </body>
+
 </html>
