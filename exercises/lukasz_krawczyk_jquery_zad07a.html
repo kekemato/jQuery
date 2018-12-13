@@ -20,13 +20,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<script>
-		// Dana jest strona z pustym węzłem body i regułą CSS dla klasy hello. Napisz skrypt jQuery, który utworzy nowy węzeł div z tekstem "Hello, world!", a następnie doda go do węzła body (tj. dołączy go jako pierwsze lub ostatnie dziecko), wyposaży w klasę CSS hello oraz uzupełni o prostą animację, np. stopniowe pojawienie się.
+		// Dana jest strona z pustym węzłem body i regułą CSS dla klasy hello. Napisz skrypt jQuery, który utworzy nowy
+		// węzeł div z tekstem "Hello, world!", a następnie doda go do węzła body(tj.dołączy go jako pierwsze lub ostatnie
+		// dziecko), wyposaży w klasę CSS hello oraz uzupełni o prostą animację, np.stopniowe pojawienie się.
 
-		// Nie usuwaj z dokumentu żadnego istniejącego kodu CSS.
+				// Nie usuwaj z dokumentu żadnego istniejącego kodu CSS.
 
-		$(function () {
-			// Tutaj wpisz swój kod inicjalizacyjny
-		});
+				$(function () {
+					$('body').append('<div>Hello, world!</div>').attr('class', 'hello').hide().fadeIn()
+				});
 	</script>
 
 </head>
